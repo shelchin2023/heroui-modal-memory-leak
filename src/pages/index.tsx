@@ -19,7 +19,7 @@ export default function IndexPage() {
         <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="auto">
           <ModalContent>
             <ModalHeader className="flex flex-col gap-1">
-              Set Buffer
+             HeroUI  Set Buffer
             </ModalHeader>
             <ModalBody>
               <Button onPress={() => {

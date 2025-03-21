@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@heroui/button": "^2.2.16",
     "@heroui/code": "^2.2.12",
     "@heroui/dropdown": "^2.3.16",
@@ -23,6 +25,7 @@
     "@heroui/system": "2.4.12",
     "@heroui/theme": "2.4.12",
     "@heroui/use-theme": "2.1.6",
+    "@mui/material": "^6.4.8",
     "@react-aria/visually-hidden": "3.8.20",
     "@react-types/shared": "3.28.0",
     "clsx": "2.1.1",
