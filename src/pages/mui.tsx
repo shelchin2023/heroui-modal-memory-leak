@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
 import Modal from '@mui/material/Modal';
 import DisplayBufferSize from '@/components/displayBufferSize';
-
+import DefaultLayout from "@/layouts/default";
 const style = {
     position: 'absolute',
     top: '50%',
@@ -32,23 +32,30 @@ export default function MUIPage() {
     }, [open]);
 
     return (
-        <div>
-            <Button onClick={handleOpen}> MUI Set Buffer </Button>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box sx={style}>
-                    <Button onClick={() => {
-                        const sizeInBytes = 50 * 1024 * 1024;
-                        const buffer = new ArrayBuffer(sizeInBytes);
-                        setBuffer(buffer)
-                    }}>Set Buffer</Button>
-                    <DisplayBufferSize buffer={buffer} />
-                </Box>
-            </Modal>
-        </div>
+        <DefaultLayout>
+            <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+                <Button onClick={handleOpen}> open modal </Button>
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <>
+
+
+                        <Box sx={style}>
+                            <Button onClick={() => {
+                                const sizeInBytes = 50 * 1024 * 1024;
+                                const buffer = new ArrayBuffer(sizeInBytes);
+                                setBuffer(buffer)
+                            }}>Set Buffer</Button>
+                            <DisplayBufferSize buffer={buffer} />
+                        </Box>
+                    </>
+
+                </Modal>
+            </section>
+        </DefaultLayout>
     );
 }
