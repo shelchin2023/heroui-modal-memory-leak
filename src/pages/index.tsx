@@ -28,11 +28,11 @@ export default function IndexPage() {
                 setBuffer(buffer)
               }}>Set Buffer</Button>
 
-              {/* <DisplayBufferSize title='inside modal' buffer={buffer} /> */}
+              <DisplayBufferSize title='inside modal' buffer={buffer} />
             </ModalBody>
           </ModalContent>
         </Modal>
-        <DisplayBufferSize title="outside Modal" buffer={buffer} />
+        {/* <DisplayBufferSize title="outside Modal" buffer={buffer} /> */}
       </section>
     </DefaultLayout>
   );
