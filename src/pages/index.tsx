@@ -27,8 +27,8 @@ export default function IndexPage() {
                 const buffer = new ArrayBuffer(sizeInBytes);
                 setBuffer(buffer)
               }}>Set Buffer</Button>
-              
-              <DisplayBufferSize title='inside modal' buffer={buffer} />
+
+              {/* <DisplayBufferSize title='inside modal' buffer={buffer} /> */}
             </ModalBody>
           </ModalContent>
         </Modal>
